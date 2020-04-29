@@ -1,0 +1,66 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using Umbraco.Web
+
+
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the CSS class "current".
+*@
+
+@{
+    var root = Model.Root();
+    var selection = root.Children.Where(x => x.IsVisible()).ToArray();
+}
+
+@if (selection.Length > 0)
+{
+    <ul class="navbar-nav">
+        <li class="@(Model.Name == root.Name ? "active" : null) nav-item">
+            <a href="@root.Url" class="nav-link">@root.Name</a>
+        </li>
+
+        @foreach (var item in selection)
+        {
+            if (Umbraco.MemberHasAccess(item.Path))
+            {
+                if (item.Children().Count() > 0)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @item.Name
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach (var subMenuItem in item.Children().Where(x => x.IsVisible()))
+                            {
+                                if (Umbraco.MemberHasAccess(subMenuItem.Path))
+                                {
+                                    if (subMenuItem.IsDocumentType("projectItem"))
+                                    {
+                                        if (subMenuItem.GetProperty("projectStatus").Value<string>() == "Completed")
+                                        {
+                                            <a class="dropdown-item" href="@subMenuItem.Url"> @subMenuItem.Name </a>
+                                        }
+
+                                    }
+
+                                    else
+                                    {
+                                        <a class="dropdown-item" href="@subMenuItem.Url"> @subMenuItem.Name </a>
+                                    }
+                                }
+
+                            }
+                        </div>
+                    </li>
+                }
+                else
+                {
+                    <li class="@(item.IsAncestorOrSelf(Model) ? "active" : null) nav-item">
+                        <a href="@item.Url" class="nav-link">@item.Name</a>
+                    </li>
+                }
+            }
+        }
+    </ul>
+}

@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HomaePage>
+    @using ContentModels = Umbraco.Web.PublishedModels;
+    @{
+    Layout = "master.cshtml";
+    }
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../assets/img/home-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>@(!string.IsNullOrWhiteSpace(Model.SiteTitle) ? Model.SiteTitle : Model.Name)</h1>
+                        <span class="subheading">The coorporation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+   @*<p class="home-content">@Html.GetGridHtml(Model,"gridLayout")</p>*@
+
+    <hr>
