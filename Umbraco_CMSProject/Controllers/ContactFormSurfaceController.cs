@@ -29,7 +29,7 @@ namespace Aarhus_Web_Dev_Coop.Controllers
 
             MailMessage message = new MailMessage();
             //The recipient's email
-            message.To.Add("monika.ananieva@gmail.com");
+            message.To.Add("pedromdias27@gmail.com");
             message.Subject = model.Subject;
             message.From = new MailAddress(model.Email, model.Name);
             message.Body = model.Message;
@@ -44,7 +44,7 @@ namespace Aarhus_Web_Dev_Coop.Controllers
 
                 //Add your own credentials here, otherwise the form won't work
                 //Those are the credentials for the account that sends the email
-                smtp.Credentials = new System.Net.NetworkCredential("e-mail", "password");
+                smtp.Credentials = new System.Net.NetworkCredential("wolf_of_mibu@hotmail.com", "howitzer152mmM-10");
 
                 // send mail
                 smtp.Send(message);

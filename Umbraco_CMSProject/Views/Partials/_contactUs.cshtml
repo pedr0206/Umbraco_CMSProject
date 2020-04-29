@@ -9,7 +9,7 @@
 @if (TempData["success"] == null)
 {
     using (Html.BeginUmbracoForm("HandleFormSubmit", "ContactFormSurface", new object { },
-    new { @class = "contact-form", autocomplete = "off" }))
+    new { @class = "form-horizontal", autocomplete = "off" }))
     {
         <section>
             @Html.TextBoxFor(m => m.Name, new { placeholder = "Name", autocomplete = "off" })
