@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Login>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="contact-form">
+        @Html.Partial("_loginForm")
+    </div>
+</div>
