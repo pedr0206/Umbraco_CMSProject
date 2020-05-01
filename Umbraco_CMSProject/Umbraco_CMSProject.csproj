@@ -482,12 +482,14 @@
     <Compile Include="App_Data\Models\ContactUs.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
+    <Compile Include="App_Data\Models\ForbiddenAccess.generated.cs" />
     <Compile Include="App_Data\Models\Guest.generated.cs" />
     <Compile Include="App_Data\Models\HomaePage.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Login.generated.cs" />
     <Compile Include="App_Data\Models\Master.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\Members.generated.cs" />
     <Compile Include="App_Data\Models\ProjectItem.generated.cs" />
     <Compile Include="App_Data\Models\ProjectsOverview.generated.cs" />
     <Compile Include="App_Data\Models\SiteMap.generated.cs" />
@@ -613,6 +615,8 @@
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Views\Partials\_loginForm.cshtml" />
     <Content Include="Views\Login.cshtml" />
+    <Content Include="Views\ForbiddenAccess.cshtml" />
+    <Content Include="Views\Members.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
