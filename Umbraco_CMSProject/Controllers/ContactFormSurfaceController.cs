@@ -44,7 +44,7 @@ namespace Aarhus_Web_Dev_Coop.Controllers
 
                 //Add your own credentials here, otherwise the form won't work
                 //Those are the credentials for the account that sends the email
-                smtp.Credentials = new System.Net.NetworkCredential("wolf_of_mibu@hotmail.com", "howitzer152mmM-10");
+                smtp.Credentials = new System.Net.NetworkCredential("gmail", "app.password");
 
                 // send mail
                 smtp.Send(message);

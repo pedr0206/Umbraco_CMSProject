@@ -1,0 +1,56 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Event>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "master.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-4">
+            <h1 class="generic-headline">Event: @Model.Value("eventTitle")</h1>
+            <p class="generic-p">
+                <span class="events-highlight">About:</span> @Model.Value("eventDescription")<br />
+                <span class="events-highlight">When:</span> @Model.Value("eventStartDate") - @Model.Value("eventEndDate")
+            </p>
+
+
+            <!--SPEAKERS NESTED CONTENT-->
+            @{
+                var items = Model.Value<IEnumerable<IPublishedElement>>("speakers");
+
+                <h1 class="generic-headline">Speakers</h1>
+
+                foreach (var item in items)
+                {
+                    var speakers = item.Value<string>("speakers");
+
+                    <div>
+                        <p class="generic-p">
+                            <span class="events-highlight">Who:</span> @item.GetProperty("firstName").Value() @item.GetProperty("lastName").Value() <br />
+                            <span class="events-highlight">Topic:</span>: @item.GetProperty("presentation").Value() <br />
+                            <span class="events-highlight">When:</span> @item.GetProperty("startTime").Value() - @item.GetProperty("endTime").Value()
+                        </p>
+                    </div>
+
+                }
+            }
+
+            <!--LOCATION RELATED CONTENT-->
+            @*@{
+                IPublishedContent typedContentPicker = Model.Value<IPublishedContent>("locationRelated");
+                if (typedContentPicker != null)
+                {
+                    <h1 class="generic-headline">@typedContentPicker.Name</h1>
+                    <p class="generic-p">
+                        <span class="events-highlight">Building:</span> @typedContentPicker.Value("locationBuilding") <br />
+                        <span class="events-highlight">Address:</span> @typedContentPicker.Value("locationAddress") <br />
+                        <span class="events-highlight">Address:</span>@typedContentPicker.Value("locationZip") @typedContentPicker.Value("locationCity")
+
+                    </p>
+                }
+            }*@
+
+        </div>
+    </div>
+</div>

@@ -480,6 +480,8 @@
     <Compile Include="App_Data\Models\ArticleItem.generated.cs" />
     <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
     <Compile Include="App_Data\Models\ContactUs.generated.cs" />
+    <Compile Include="App_Data\Models\Event.generated.cs" />
+    <Compile Include="App_Data\Models\EventsOverview.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\ForbiddenAccess.generated.cs" />
@@ -493,6 +495,7 @@
     <Compile Include="App_Data\Models\ProjectItem.generated.cs" />
     <Compile Include="App_Data\Models\ProjectsOverview.generated.cs" />
     <Compile Include="App_Data\Models\SiteMap.generated.cs" />
+    <Compile Include="App_Data\Models\Speaker.generated.cs" />
     <Compile Include="App_Data\Models\TextPage.generated.cs" />
     <Compile Include="Controllers\ContactFormSurfaceController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -617,6 +620,8 @@
     <Content Include="Views\Login.cshtml" />
     <Content Include="Views\ForbiddenAccess.cshtml" />
     <Content Include="Views\Members.cshtml" />
+    <Content Include="Views\Event.cshtml" />
+    <Content Include="Views\EventsOverview.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
