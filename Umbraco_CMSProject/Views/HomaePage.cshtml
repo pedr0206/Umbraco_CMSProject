@@ -1,24 +1,89 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HomaePage>
-    @using ContentModels = Umbraco.Web.PublishedModels;
-    @{
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
     Layout = "master.cshtml";
-    }
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('../assets/img/home-bg.jpg')">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1>@(!string.IsNullOrWhiteSpace(Model.SiteTitle) ? Model.SiteTitle : Model.Name)</h1>
-                        <span class="subheading">The coorporation</span>
-                    </div>
+}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../assets/img/89855279_626002007963521_3513701358899298304_n.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>@(!string.IsNullOrWhiteSpace(Model.SiteTitle) ? Model.SiteTitle : Model.Name)</h1>
+                    <span class="subheading">Best cars ever</span>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Main Content -->
-   @*<p class="home-content">@Html.GetGridHtml(Model,"gridLayout")</p>*@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+                
+                <h2 class="post-title">
+                    Longbridge: The power-house of British car industry
+                </h2>
+                    <h4 class="post-subtitle">
+                        Where many historical vehicles were produced
+                    </h4>
+              
+                <p class="post-meta">
+                    Posted by
+                    <a href="#">Sir McGregory
+                    on September 24, 2019
+                </p>
+            </div>
+            <hr>
+            <div class="post-preview">
+                
+                    <h2 class="post-title">
+                        The MG Rover Group is a car company based in Longbridge, Birmingham
+                    </h2>
+                
+                <p class="post-meta">
+                    Posted by
+                    <a href="#">Mark Edwards</a>
+                    on September 18, 2019
+                </p>
+            </div>
+            <hr>
+            <div class="post-preview">
+                
+                    <h2 class="post-title">
+                        Project R40
+                    </h2>
+                    <h3 class="post-subtitle">
+                        One of the british finest's cars
+                    </h3>
+                
+                <p class="post-meta">
+                    Posted by
+                    <a href="#">MG Rover CEO</a>
+                    on August 24, 2019
+                </p>
+            </div>
+            <hr>
+            <div class="post-preview">
+                
+                    <h2 class="post-title">
+                        MG is back
+                    </h2>
+                    <h3 class="post-subtitle">
+                        Cars built this well are few and far between. New models will shake the market wht the brand new MGs.
+                    </h3>
+               
+                <p class="post-meta">
+                    Posted by
+                    <a href="#">Start Bootstrap</a>
+                    on July 8, 2019
+                </p>
+            </div>
+            <hr>
 
-    <hr>
+            <!-- Main Content -->
+            @*<p class="home-content">@Html.GetGridHtml(Model,"gridLayout")</p>*@
+
+            <hr>

@@ -73,6 +73,13 @@ namespace Umbraco.Web.PublishedModels
 		public string EventTitle => this.Value<string>("eventTitle");
 
 		///<summary>
+		/// Location
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
+		[ImplementPropertyType("location")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Location => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("location");
+
+		///<summary>
 		/// Speakers
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
